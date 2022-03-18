@@ -12,38 +12,36 @@ const dongia100 = 650;
 const dongia200 = 850;
 const dongia350 = 1100;
 const dongia00 = 1300;
-var tien0 = 0;
-var tien1 = 0;
 var tongTien = 0;
 document.getElementById('xemGia').onclick = () => {
     var soChi = document.getElementById("soChi").value * 1;
     var user = document.getElementById('user').value;
     giaTien(soChi,dongia50,dongia100,dongia200,dongia350,dongia00);
     var thongBaoTen = "Thông tin tiền điện của: " + user;
-    var thongBaoTien =  "Số tiền điện tháng này của bạn là: " + tongTien;
+    var thongBaoTien =  "Số tiền điện tháng này của bạn là: " + tongTien + " VNĐ";
     document.getElementById('ketQuaTen').innerHTML = thongBaoTen;
     document.getElementById('ketQuaTien').innerHTML = thongBaoTien;
 
 //Giá điện tiêu thụ trên từng số chỉ điện
 }
-function tieuThu0(soChi,donGia0){
+function tieuThu0(soChi,donGia0){                       // < 50 kW
     var tieuThu = soChi * donGia0;
     return tieuThu;
 }
-function tieuThu1(soChi,donGia1){
-    var tieuThu = (soChi - 50) * donGia1;
+function tieuThu1(soChi,donGia1){                       // < 100 kW (50 kW tiếp theo)
+    var tieuThu = (soChi - 50) * donGia1;               
     return tieuThu;
 } 
-function tieuThu2(soChi,donGia2){
+function tieuThu2(soChi,donGia2){                       // < 200 kW (100 kW kế tiếp)
     var tieuThu = (soChi - 100) * donGia2;
     return tieuThu;
 }
-function tieuThu3(soChi,donGia3){
+function tieuThu3(soChi,donGia3){                       // < 350 kW (150 kW kế tiếp)
     var tieuThu = (soChi - 150) * donGia3;
     return tieuThu;
 } 
-function tieuThu4(soChi,donGia4){
-    var tieuThu = (soChi - 300) * donGia4;
+function tieuThu4(soChi,donGia4){                       // lớn hơn 350 kW
+    var tieuThu = (soChi - 350) * donGia4;
     return tieuThu;
 } 
 //Tổng tiền điện đã tiêu thụ
