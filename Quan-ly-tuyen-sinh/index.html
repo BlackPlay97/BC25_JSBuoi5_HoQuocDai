@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="./main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">Điểm chuẩn của hội đồng thi</div>
+            <div class="card-body">
+              <input type="number" id="diemChuan" />
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">Điểm từng môn thi được</div>
+            <div class="card-body">
+              Điểm môn thứ 1<input type="number" id="diem1"/><br/>
+              Điểm môn thứ 2<input type="number" id="diem2"/><br/>
+              Điểm môn thứ 3<input type="number" id="diem3"/><br/>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">Khu vực thi</div>
+            <div class="card-body">
+              <ul style="list-style-type: none;">
+                <li>
+                  <input type="radio" name="area" value="0" id="areaX"/>
+                  <label>Khu vực X</label>
+                </li>
+                <li>
+                  <input type="radio" name="area" value="2" id="areaA" />
+                  <label>Khu vực A</label>
+                </li>
+                <li>
+                  <input type="radio" name="area" value="1" id="areaB"/>
+                  <label>Khu vực B</label>
+                </li>
+                <li>
+                  <input type="radio" name="area" value="0.5" id="areaC"/>
+                  <label>Khu vực C</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">Đối tượng ưu tiên</div>
+            <div class="card-body">
+              <ul style="list-style-type:none;">
+                <li><input type="radio" id="obj0" name="obj" value="1"><label>Đối tượng 0</label></li>
+                <li><input type="radio" id="obj1" name="obj" value="2.5"><label>Đối tượng 1</label></li>
+                <li><input type="radio" id="obj2" name="obj" value="1.5"><label>Đối tượng 2</label></li>
+                <li><input type="radio" id="obj3" name="obj" value="1"><label>Đối tượng 3</label></li>
+              </ul>
+            </div>
+          </div>
+          <button onclick="xetTuyen()" id="btn" class="btn-success btn-primary btn-lg" style="margin-top:30px; margin-left: 100px;">Xem kết quả</button>
+          <div id="ketQua"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
