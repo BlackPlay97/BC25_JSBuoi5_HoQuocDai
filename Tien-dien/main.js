@@ -24,6 +24,7 @@ document.getElementById('xemGia').onclick = () => {
     document.getElementById('ketQuaTen').innerHTML = thongBaoTen;
     document.getElementById('ketQuaTien').innerHTML = thongBaoTien;
 
+//Giá điện tiêu thụ trên từng số chỉ điện
 }
 function tieuThu0(soChi,donGia0){
     var tieuThu = soChi * donGia0;
@@ -45,6 +46,7 @@ function tieuThu4(soChi,donGia4){
     var tieuThu = (soChi - 300) * donGia4;
     return tieuThu;
 } 
+//Tổng tiền điện đã tiêu thụ
 function giaTien(soChi,donGia0,donGia1,donGia2,donGia3,donGia4){
     if (soChi < 50){
         tongTien = tieuThu0(soChi,donGia0);
