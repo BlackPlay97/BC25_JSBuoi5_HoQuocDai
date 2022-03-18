@@ -1,3 +1,12 @@
+/**
+ * input
+ *  -   Nhập tên người dùng, nhập số chỉ điện;
+ * process
+ *  -   Xử lý tiền điện theo đơn giá của từng số chỉ điện;
+ *  -   Tổng tiền điện theo đơn giá đã xử lý;
+ * output
+ *  -   Xuất tên người dùng và số tiền điện của họ;
+ */
 const dongia50 = 500;
 const dongia100 = 650;
 const dongia200 = 850;
